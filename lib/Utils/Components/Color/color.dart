@@ -5,6 +5,7 @@ class AppColors {
   static const Color primaryColor = Color(0xFFD5D5D5);
   static const Color secondaryColor = Color(0xFFFE9A38);
   static const Color buttonTextColor = Colors.white;
+  static const Color SearchTextColor = Color(0xFFF7F7F7);
 
   // Add more colors as needed
 
