@@ -6,19 +6,21 @@ import 'Utils/Routes/routes.dart';
 import 'Utils/Routes/routes_name.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp( const MyApp());
 }
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Your App',
+      title: 'Shoe Space',
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(
           Theme.of(context).textTheme,
         ),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.yellow,
       ),
       initialRoute: RoutesName.splash,
       onGenerateRoute: Routes.generateRoute,

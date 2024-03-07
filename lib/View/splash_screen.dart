@@ -13,7 +13,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(const Duration(seconds: 8),(){
@@ -36,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Spacer(),
+            const Spacer(),
             Image.asset("assets/Logo.png"),
             Text('Shoe Space',style: TextStyle(fontWeight: FontWeight.bold,fontSize:FontSizes.large),),
             Spacer()
