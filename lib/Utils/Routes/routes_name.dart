@@ -6,6 +6,6 @@ class RoutesName {
   static const String startup_crasuel = 'startupCrasuel_screen';
   static const String add_cart = 'Add cart';
   static const String cart = 'cart';
-
+  static const String favorite = 'favorite';
 
 }

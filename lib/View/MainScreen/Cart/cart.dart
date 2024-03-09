@@ -177,6 +177,7 @@ class _CartState extends State<Cart> {
             ),
           ),
           Material(
+
               elevation: 5,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(40.0),

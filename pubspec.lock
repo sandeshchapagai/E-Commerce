@@ -158,6 +158,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.13.1"
+  flutter_limited_checkbox:
+    dependency: "direct main"
+    description:
+      name: flutter_limited_checkbox
+      sha256: "0bbcf10c88810969a68e37c7b50aabb4ea09147b343f858d61dbc8cee8fe671f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1"
   flutter_lints:
     dependency: "direct dev"
     description:

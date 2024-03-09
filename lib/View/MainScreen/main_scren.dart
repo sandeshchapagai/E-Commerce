@@ -1,3 +1,4 @@
+import 'package:ecommerce/View/MainScreen/Favorite/favorite.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_tab_bar/MotionBadgeWidget.dart';
@@ -50,7 +51,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         controller: _motionTabBarController, // Add this controller if you need to change your tab programmatically
         initialSelectedTab: "Home",
         useSafeArea: false,
-        labels: const ["Home", "Favourite", "Order", "Settings"],
+        labels: const ["Home", "Favorite", "Order", "Settings"],
         icons: const [Icons.home_outlined, Icons.favorite_border, Icons.shopping_bag_outlined, Icons.settings_outlined],
         tabSize: 50,
         tabBarHeight: 60,
@@ -76,7 +77,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         controller: _motionTabBarController,
         children: const <Widget>[
           DashBoard(),
-          DashBoard(),
+          Favorite(),
           DashBoard(),
           DashBoard(),
         ],
