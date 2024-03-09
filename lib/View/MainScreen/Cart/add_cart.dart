@@ -7,6 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:rate_in_stars/rate_in_stars.dart';
 
 import '../../../Utils/Components/Widgets/color_picker.dart';
+import '../../../Utils/Routes/routes_name.dart';
 
 class AddCart extends StatefulWidget {
   const AddCart({super.key});
@@ -49,6 +50,10 @@ class _AddCartState extends State<AddCart> {
                 style: TextStyle(fontSize: FontSizes.medium),
               ),
               badges.Badge(
+                position: badges.BadgePosition.topStart(top: -6, start: 17),
+                badgeStyle: badges.BadgeStyle(
+                    badgeColor: AppColors.secondaryColor
+                ),
                 // badgeContent: Text('3'),
                 child: Icon(Icons.shopping_cart_outlined),
               )
@@ -56,10 +61,11 @@ class _AddCartState extends State<AddCart> {
           ),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.all(25.0),
-              child: Image.asset('assets/images/sneakers1.png'),
+              padding: const EdgeInsets.only(top: 15,left: 25,right: 25,bottom: 15),
+              child: Expanded(child: Image.asset('assets/images/sneakers1.png')),
             ),
             Material(
               elevation: 5,
@@ -79,35 +85,32 @@ class _AddCartState extends State<AddCart> {
                         'Nike Jordan',
                         style: TextStyle(fontSize: FontSizes.large),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 10.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                RatingStars(
-                                    editable: true,
-                                    rating: 4,
-                                    color: Colors.amber,
-                                    iconSize: 16),
-                                Text(
-                                  '\t\t\t\t\t\t125 Reviews',
-                                  style: TextStyle(
-                                      color: AppColors.greyColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: FontSizes.small),
-                                )
-                              ],
-                            ),
-                            Text(
-                              '\$280',
-                              style: TextStyle(
-                                  fontSize: FontSizes.medium,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              RatingStars(
+                                  editable: true,
+                                  rating: 4,
+                                  color: Colors.amber,
+                                  iconSize: 16),
+                              Text(
+                                '\t\t\t\t\t\t125 Reviews',
+                                style: TextStyle(
+                                    color: AppColors.greyColor,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: FontSizes.small),
+                              )
+                            ],
+                          ),
+                          Text(
+                            '\$280',
+                            style: TextStyle(
+                                fontSize: FontSizes.medium,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
                       ),
                       Text(
                         'sneakers are versatile timeless sporty shoes, which basically most of us at least have a pair or two. This easy to combine casual style shoes, can be found as in classic style, platform, dressy sneakers, etc.',
@@ -136,85 +139,82 @@ class _AddCartState extends State<AddCart> {
                         ],
                       ),
                       Spacer(),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 15.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Quantity',
-                              style: TextStyle(
-                                  fontSize: FontSizes.medium,
-                                  color: AppColors.greyColor),
-                            ),
-                            Row(
-                              children: [
-                                Container(
-                                  height: 35,
-                                  width: 35,
-                                  decoration: BoxDecoration(
-                                    color: AppColors.primaryColor,
-                                    borderRadius: BorderRadius.circular(30),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Quantity',
+                            style: TextStyle(
+                                fontSize: FontSizes.medium,
+                                color: AppColors.greyColor),
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                height: 35,
+                                width: 35,
+                                decoration: BoxDecoration(
+                                  color: AppColors.primaryColor,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      counter = (counter - 1).clamp(0, 9999);
+                                    });
+                                  },
+                                  icon: Icon(
+                                    Icons.remove,
+                                    size: 20,
                                   ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: screenSize.width * 0.03,
+                              ),
+                              Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  color: AppColors.primaryColor,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '$counter',
+                                    style: TextStyle(
+                                        fontSize: FontSizes.medium,
+                                        color: Colors.black54),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: screenSize.width * 0.03,
+                              ),
+                              Container(
+                                height: 35,
+                                width: 35,
+                                decoration: BoxDecoration(
+                                  color: AppColors.primaryColor,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Center(
                                   child: IconButton(
                                     onPressed: () {
                                       setState(() {
-                                        counter = (counter - 1).clamp(0, 9999);
+                                        counter = counter + 1;
                                       });
                                     },
                                     icon: Icon(
-                                      Icons.remove,
+                                      Icons.add,
                                       size: 20,
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  width: screenSize.width * 0.03,
-                                ),
-                                Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    color: AppColors.primaryColor,
-                                    borderRadius: BorderRadius.circular(30),
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      '$counter',
-                                      style: TextStyle(
-                                          fontSize: FontSizes.medium,
-                                          color: Colors.black54),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: screenSize.width * 0.03,
-                                ),
-                                Container(
-                                  height: 35,
-                                  width: 35,
-                                  decoration: BoxDecoration(
-                                    color: AppColors.primaryColor,
-                                    borderRadius: BorderRadius.circular(30),
-                                  ),
-                                  child: Center(
-                                    child: IconButton(
-                                      onPressed: () {
-                                        setState(() {
-                                          counter = counter + 1;
-                                        });
-                                      },
-                                      icon: Icon(
-                                        Icons.add,
-                                        size: 20,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                       Spacer(),
                       Row(
@@ -246,7 +246,7 @@ class _AddCartState extends State<AddCart> {
                                           AppColors.secondaryColor),
                                 ),
                                 onPressed: () {
-                                  // Navigator.pushNamed(context, RoutesName.home);
+                                  Navigator.pushNamed(context, RoutesName.cart);
                                 },
                                 child: const Row(
                                   mainAxisAlignment:

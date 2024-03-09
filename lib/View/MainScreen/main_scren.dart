@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:motion_tab_bar/MotionBadgeWidget.dart';
 import 'package:motion_tab_bar/MotionTabBar.dart';
 import 'package:motion_tab_bar/MotionTabBarController.dart';
-
 import '../../Utils/Components/Color/color.dart';
 import 'Home/home.dart';
 class MainScreen extends StatefulWidget {
@@ -50,7 +49,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
       bottomNavigationBar: MotionTabBar(
         controller: _motionTabBarController, // Add this controller if you need to change your tab programmatically
         initialSelectedTab: "Home",
-        useSafeArea: true, // default: true, apply safe area wrapper
+        useSafeArea: false,
         labels: const ["Home", "Favourite", "Order", "Settings"],
         icons: const [Icons.home_outlined, Icons.favorite_border, Icons.shopping_bag_outlined, Icons.settings_outlined],
         tabSize: 50,
@@ -73,57 +72,16 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         },
       ),
       body: TabBarView(
-        physics: const NeverScrollableScrollPhysics(), // swipe navigation handling is not supported
+        physics: const NeverScrollableScrollPhysics(),
         controller: _motionTabBarController,
-        children: <Widget>[
+        children: const <Widget>[
           DashBoard(),
-          MainPageContentComponent(title: "Home Page", controller: _motionTabBarController!),
-          MainPageContentComponent(title: "Cart Page", controller: _motionTabBarController!),
-          MainPageContentComponent(title: "Settings Page", controller: _motionTabBarController!),
+          DashBoard(),
+          DashBoard(),
+          DashBoard(),
         ],
       ),
     );
   }
 }
 
-class MainPageContentComponent extends StatelessWidget {
-  const MainPageContentComponent({
-    required this.title,
-    required this.controller,
-    Key? key,
-  }) : super(key: key);
-
-  final String title;
-  final MotionTabBarController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 50),
-          const Text('Go to "X" page programmatically'),
-          const SizedBox(height: 10),
-          ElevatedButton(
-            onPressed: () => controller.index = 0,
-            child: const Text('Dashboard Page'),
-          ),
-          ElevatedButton(
-            onPressed: () => controller.index = 1,
-            child: const Text('Home Page'),
-          ),
-          ElevatedButton(
-            onPressed: () => controller.index = 2,
-            child: const Text('Profile Page'),
-          ),
-          ElevatedButton(
-            onPressed: () => controller.index = 3,
-            child: const Text('Settings Page'),
-          ),
-        ],
-      ),
-    );
-  }
-}

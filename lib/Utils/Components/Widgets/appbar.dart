@@ -1,6 +1,9 @@
+import 'package:ecommerce/Utils/Components/Color/color.dart';
 import 'package:ecommerce/Utils/Components/Font/font_size.dart';
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
+
+import '../../Routes/routes_name.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final double height;
@@ -27,9 +30,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
 
           ),
-          badges.Badge(
-            // badgeContent: Text('3'),
-            child: Icon(Icons.shopping_cart_outlined),
+          InkWell(
+            onTap: (){
+              Navigator.pushNamed(context, RoutesName.cart);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: badges.Badge(
+                position: badges.BadgePosition.topStart(top: -6, start: 17),
+                badgeStyle: const badges.BadgeStyle(
+                  badgeColor: AppColors.secondaryColor
+                ),
+                child: const Icon(Icons.shopping_cart_outlined),
+              ),
+            ),
           )
         ],
       ),
@@ -40,22 +54,3 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => Size.fromHeight(height);
 }
 
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      body: Column(
-        children: [
-          CustomAppBar(title: 'My Custom AppBar'),
-          Expanded(
-            child: Container(
-              color: Colors.grey[200], // Placeholder content
-              child: Center(
-                child: Text('Your content goes here'),
-              ),
-            ),
-          ),
-        ],
-      ),
-    ),
-  ));
-}

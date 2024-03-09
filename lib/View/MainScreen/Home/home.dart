@@ -31,8 +31,9 @@ class _DashBoardState extends State<DashBoard> {
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
+            physics: NeverScrollableScrollPhysics(),
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const CustomAppBar(title: 'Shoe Space'),
               SizedBox(height: screenSize.width * 0.05),
@@ -40,6 +41,7 @@ class _DashBoardState extends State<DashBoard> {
                 children: [
                   Expanded(
                     child: Container(
+
                       height: screenSize.height * 0.07,
                       child: Card(
                         elevation: 0,
@@ -135,9 +137,9 @@ class _DashBoardState extends State<DashBoard> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8.0),
-                        child: Container(
-                          height: screenSize.height*0.56,
-                          child: const TabBarView(
+                        child: SizedBox(
+                          height: screenSize.height*0.6,
+                          child:  const TabBarView(
                             children: <Widget>[
                               Snekars(),
                               Boots(),
