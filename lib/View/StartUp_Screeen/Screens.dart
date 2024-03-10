@@ -11,7 +11,7 @@ class CarouselScreen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          gradient: AppColors.primaryGradient,
+        color: AppColors.backgroundColor
         ),
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -70,7 +70,7 @@ class CarouselScreen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          gradient: AppColors.primaryGradient,
+          color: AppColors.backgroundColor
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

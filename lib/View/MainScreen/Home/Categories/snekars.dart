@@ -97,7 +97,7 @@ class _SnekarsState extends State<Snekars> {
         
                               ),
                               Text(
-                                '\$300',style: TextStyle(fontSize: FontSizes.small, fontWeight: FontWeight.bold),
+                                '\$300',style: TextStyle(fontSize: FontSizes.toSmall, fontWeight: FontWeight.bold),
                               )
         
                             ],

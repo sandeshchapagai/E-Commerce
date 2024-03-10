@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/widgets.dart';
 import 'package:rate_in_stars/rate_in_stars.dart';
-
+import 'package:fluttertoast/fluttertoast.dart';
 import '../../../Utils/Components/Widgets/color_picker.dart';
 import '../../../Utils/Routes/routes_name.dart';
 
@@ -17,6 +17,7 @@ class AddCart extends StatefulWidget {
 }
 
 class _AddCartState extends State<AddCart> {
+  bool isFavorite = false;
   int counter = 0;
 
   @override
@@ -51,9 +52,8 @@ class _AddCartState extends State<AddCart> {
               ),
               badges.Badge(
                 position: badges.BadgePosition.topStart(top: -6, start: 17),
-                badgeStyle: badges.BadgeStyle(
-                    badgeColor: AppColors.secondaryColor
-                ),
+                badgeStyle:
+                    badges.BadgeStyle(badgeColor: AppColors.secondaryColor),
                 // badgeContent: Text('3'),
                 child: Icon(Icons.shopping_cart_outlined),
               )
@@ -64,8 +64,10 @@ class _AddCartState extends State<AddCart> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 15,left: 25,right: 25,bottom: 15),
-              child: Expanded(child: Image.asset('assets/images/sneakers1.png')),
+              padding: const EdgeInsets.only(
+                  top: 15, left: 25, right: 25, bottom: 15),
+              child:
+                  Expanded(child: Image.asset('assets/images/sneakers1.png')),
             ),
             Material(
               elevation: 5,
@@ -114,10 +116,9 @@ class _AddCartState extends State<AddCart> {
                       ),
                       Text(
                         'sneakers are versatile timeless sporty shoes, which basically most of us at least have a pair or two. This easy to combine casual style shoes, can be found as in classic style, platform, dressy sneakers, etc.',
-                        style: TextStyle(fontSize: FontSizes.medium),
+                        style: TextStyle(fontSize: FontSizes.semiSmall),
                         textAlign: TextAlign.justify,
                       ),
-
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -134,8 +135,77 @@ class _AddCartState extends State<AddCart> {
                               print('Selected color: $color');
                             },
                           )
+                        ],
+                      ),
+                      Spacer(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Size',
+                            style: TextStyle(
+                                fontSize: FontSizes.medium,
+                                color: AppColors.greyColor),
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                height: 25,
+                                width: 25,
+                                decoration: BoxDecoration(
+                                  color: AppColors.primaryColor,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '8',
+                                    style: TextStyle(
+                                        fontSize: FontSizes.small,
+                                        color: Colors.black54),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: screenSize.width * 0.03,
+                              ),
+                              Container(
+                                height: 25,
+                                width: 25,
+                                decoration: BoxDecoration(
+                                  color: AppColors.primaryColor,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '8',
+                                    style: TextStyle(
+                                        fontSize: FontSizes.small,
+                                        color: Colors.black54),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: screenSize.width * 0.03,
+                              ),
+                              Container(
+                                height: 25,
+                                width: 25,
+                                decoration: BoxDecoration(
+                                  color: AppColors.primaryColor,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '8',
+                                    style: TextStyle(
+                                        fontSize: FontSizes.small,
+                                        color: Colors.black54),
+                                  ),
+                                ),
+                              ),
 
-
+                            ],
+                          ),
                         ],
                       ),
                       Spacer(),
@@ -151,8 +221,8 @@ class _AddCartState extends State<AddCart> {
                           Row(
                             children: [
                               Container(
-                                height: 35,
-                                width: 35,
+                                height: 30,
+                                width: 30,
                                 decoration: BoxDecoration(
                                   color: AppColors.primaryColor,
                                   borderRadius: BorderRadius.circular(30),
@@ -165,7 +235,7 @@ class _AddCartState extends State<AddCart> {
                                   },
                                   icon: Icon(
                                     Icons.remove,
-                                    size: 20,
+                                    size: 15,
                                   ),
                                 ),
                               ),
@@ -173,8 +243,8 @@ class _AddCartState extends State<AddCart> {
                                 width: screenSize.width * 0.03,
                               ),
                               Container(
-                                height: 40,
-                                width: 40,
+                                height: 38,
+                                width: 38,
                                 decoration: BoxDecoration(
                                   color: AppColors.primaryColor,
                                   borderRadius: BorderRadius.circular(30),
@@ -188,12 +258,16 @@ class _AddCartState extends State<AddCart> {
                                   ),
                                 ),
                               ),
+
+
+
+
                               SizedBox(
                                 width: screenSize.width * 0.03,
                               ),
                               Container(
-                                height: 35,
-                                width: 35,
+                                height: 30,
+                                width: 30,
                                 decoration: BoxDecoration(
                                   color: AppColors.primaryColor,
                                   borderRadius: BorderRadius.circular(30),
@@ -207,11 +281,12 @@ class _AddCartState extends State<AddCart> {
                                     },
                                     icon: Icon(
                                       Icons.add,
-                                      size: 20,
+                                      size: 15,
                                     ),
                                   ),
                                 ),
                               ),
+
                             ],
                           ),
                         ],
@@ -227,15 +302,25 @@ class _AddCartState extends State<AddCart> {
                                         AppColors.secondaryColor),
                               ),
                               onPressed: () {
-                                // Navigator.pushNamed(context, RoutesName.home);
+                                setState(() {
+                                  isFavorite = !isFavorite;
+                                });
+                                Fluttertoast.showToast(
+                                    msg: isFavorite ? "Added to Favourite":"Removed from Favourite",
+                                    toastLength: Toast.LENGTH_SHORT,
+                                    gravity: ToastGravity.BOTTOM_LEFT,
+                                    timeInSecForIosWeb: 1,
+                                    backgroundColor: AppColors.secondaryColor,
+                                    textColor: AppColors.buttonTextColor,
+                                    fontSize:FontSizes.medium,
+                                );
                               },
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.white,
-                                  ),
-                                ],
+                              child: Icon(
+                                isFavorite
+                                    ? Icons.favorite
+                                    : Icons.favorite_border,
+                                color:
+                                    isFavorite ? Colors.red : Colors.white,
                               )),
                           Container(
                             width: 260,
