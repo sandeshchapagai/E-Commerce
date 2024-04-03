@@ -11,14 +11,6 @@ import '../../View/MainScreen/main_scren.dart';
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      // case RoutesName.login:
-      //   return MaterialPageRoute(
-      //       builder: (BuildContext context) => LoginScreen());
-      //
-      // case RoutesName.signup:
-      //   return MaterialPageRoute(
-      //       builder: (BuildContext context) => SignUpScreen());
-
       case RoutesName.splash:
         return MaterialPageRoute(
             builder: (BuildContext context) => const SplashScreen());

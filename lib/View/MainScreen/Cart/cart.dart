@@ -21,11 +21,10 @@ class _CartState extends State<Cart> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             size: 16,
           ),
-          // Change this to the desired icon
           onPressed: () {
             Navigator.pop(context);
           },
@@ -63,7 +62,7 @@ class _CartState extends State<Cart> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Row(
+                                const Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -179,7 +178,7 @@ class _CartState extends State<Cart> {
           Material(
 
               elevation: 5,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(40.0),
                 topRight: Radius.circular(40.0),
               ),
@@ -187,12 +186,12 @@ class _CartState extends State<Cart> {
                 height: screenSize.height * 0.2,
                 width: screenSize.width,
                 child: Padding(
-                  padding: EdgeInsets.all(25.0),
+                  padding: const EdgeInsets.all(25.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 25.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

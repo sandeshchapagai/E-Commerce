@@ -37,8 +37,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           children: [
             const Spacer(),
             Image.asset("assets/Logo.png"),
-            Text('Shoe Space',style: TextStyle(fontWeight: FontWeight.bold,fontSize:FontSizes.large),),
-            Spacer()
+            const Text('Shoe Space',style: TextStyle(fontWeight: FontWeight.bold,fontSize:FontSizes.large),),
+            const Spacer()
           ],
         )
       ),

@@ -3,9 +3,7 @@ import 'package:ecommerce/Utils/Components/Color/color.dart';
 import 'package:ecommerce/Utils/Components/Font/font_size.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../Utils/Routes/routes_name.dart';
-
 class CarouselScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -35,7 +33,8 @@ class CarouselScreen1 extends StatelessWidget {
               Text(
                 "Best Shoe Seller\n In the World",
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: FontSizes.large),
+                    fontWeight: FontWeight.bold, fontSize: FontSizes.large
+                ),
               ),
               Text(
                 'Quality, variety, convenience, and customer satisfaction. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -49,11 +48,9 @@ class CarouselScreen1 extends StatelessWidget {
           padding: const EdgeInsets.all(18.0),
           child: ElevatedButton(
               style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all<Color>(AppColors.secondaryColor),
+                backgroundColor: MaterialStateProperty.all<Color>(AppColors.secondaryColor),
               ),
               onPressed: () {
-
               },
               child: const Text(
                 'Next',
