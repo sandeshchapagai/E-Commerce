@@ -1,4 +1,5 @@
 import 'package:ecommerce/View/MainScreen/Favorite/favorite.dart';
+import 'package:ecommerce/View/MainScreen/Order/order.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_tab_bar/MotionBadgeWidget.dart';
@@ -78,7 +79,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         children: const <Widget>[
           DashBoard(),
           Favorite(),
-          DashBoard(),
+          Order(),
           DashBoard(),
         ],
       ),

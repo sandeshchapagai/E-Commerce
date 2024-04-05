@@ -158,7 +158,7 @@ class _AddCartState extends State<AddCart> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    '8',
+                                    's',
                                     style: TextStyle(
                                         fontSize: FontSizes.small,
                                         color: Colors.black54),
@@ -177,7 +177,7 @@ class _AddCartState extends State<AddCart> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    '8',
+                                    'l',
                                     style: TextStyle(
                                         fontSize: FontSizes.small,
                                         color: Colors.black54),
@@ -196,7 +196,7 @@ class _AddCartState extends State<AddCart> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    '8',
+                                    'xl',
                                     style: TextStyle(
                                         fontSize: FontSizes.small,
                                         color: Colors.black54),

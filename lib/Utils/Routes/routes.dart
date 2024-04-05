@@ -17,7 +17,7 @@ class Routes {
 
       case RoutesName.startup_crasuel:
         return MaterialPageRoute(
-            builder: (BuildContext context) => StartupCarousel());
+            builder: (BuildContext context) => OnBoardingPage());
 
       case RoutesName.home:
         return MaterialPageRoute(

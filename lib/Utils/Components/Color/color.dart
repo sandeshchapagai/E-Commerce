@@ -9,6 +9,8 @@ class AppColors {
   static const Color cardColor = Colors.white;
   static const Color backgroundColor = Color(0xFFF5F7F8);
   static const Color greyColor = Colors.grey;
+  static const Color textColor = Colors.black;
+
 
   // Add more colors as needed
 

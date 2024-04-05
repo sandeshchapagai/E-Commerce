@@ -5,10 +5,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../Utils/Routes/routes_name.dart';
 class CarouselScreen1 extends StatelessWidget {
+  const CarouselScreen1({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
         color: AppColors.backgroundColor
         ),
         child: Column(
@@ -33,7 +34,7 @@ class CarouselScreen1 extends StatelessWidget {
               Text(
                 "Best Shoe Seller\n In the World",
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: FontSizes.large
+                    fontWeight: FontWeight.bold, fontSize: FontSizes.large,
                 ),
               ),
               Text(
