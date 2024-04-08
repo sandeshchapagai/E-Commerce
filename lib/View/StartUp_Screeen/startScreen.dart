@@ -34,21 +34,18 @@ class OnBoardingPageState extends State<OnBoardingPage> {
     const bodyStyle = TextStyle(fontSize: 19.0);
 
     const pageDecoration = PageDecoration(
-      image
       titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
       bodyTextStyle: bodyStyle,
       // bodyPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
       pageColor: AppColors.backgroundColor,
       imagePadding: EdgeInsets.zero,
     );
-
     return IntroductionScreen(
       key: introKey,
       globalBackgroundColor: AppColors.backgroundColor,
       allowImplicitScrolling: true,
       autoScrollDuration: 30000,
       infiniteAutoScroll: true,
-
       pages: [
         PageViewModel(
           title: "Fractional shares",

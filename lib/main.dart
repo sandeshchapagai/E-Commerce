@@ -19,13 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(
           Theme.of(context).textTheme,
-
-
-
-
-
-
-        ),
+       ),
         primarySwatch: Colors.yellow,
       ),
       initialRoute: RoutesName.splash,
