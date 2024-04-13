@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecommerce/Utils/Components/Color/color.dart';
 import 'package:ecommerce/Utils/Components/Font/font_size.dart';
@@ -24,7 +26,7 @@ class CarouselScreen1 extends StatelessWidget {
                   bottomRight: Radius.circular(
                       100.0), // Adjust the border radius as needed
                 ),
-                child: Container(child: Image.asset("assets/shoe.jpg")))),
+                child: Container(child: Image.asset("assets/shoe2.jpg")))),
         const Padding(
           padding: EdgeInsets.all(24.0),
           child: Column(
@@ -32,14 +34,16 @@ class CarouselScreen1 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Best Shoe Seller\n In the World",
+                "Best Shoe Seller\nIn the World",
+                textAlign: TextAlign.start,
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: FontSizes.large,
+                    fontWeight: FontWeight.bold, fontSize: FontSizes.large,color: AppColors.textColor,decoration: TextDecoration.none
                 ),
               ),
               Text(
-                'Quality, variety, convenience, and customer satisfaction. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                textAlign: TextAlign.justify,style: TextStyle(fontSize: FontSizes.medium),
+                '\nQuality, variety, convenience, and customer satisfaction. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                textAlign: TextAlign.justify,style: TextStyle(fontSize: FontSizes.medium,fontWeight: FontWeight.w300,   color: AppColors.textColor, // Change text color to black
+                  decoration: TextDecoration.none),
               ),
             ],
           ),
@@ -52,6 +56,7 @@ class CarouselScreen1 extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all<Color>(AppColors.secondaryColor),
               ),
               onPressed: () {
+                Navigator.pushNamed(context, RoutesName.second_crasuel);
               },
               child: const Text(
                 'Next',
@@ -82,7 +87,7 @@ class CarouselScreen2 extends StatelessWidget {
                       bottomRight: Radius.circular(
                           100.0), // Adjust the border radius as needed
                     ),
-                    child: Container(child: Image.asset("assets/shoe2.jpg")))),
+                    child: Container(child: Image.asset("assets/shoe.jpg")))),
             const Padding(
               padding: EdgeInsets.all(24.0),
               child: Column(
@@ -91,12 +96,12 @@ class CarouselScreen2 extends StatelessWidget {
                   Text(
                     "Enjoy Your Online \nShopping",
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: FontSizes.large),
+                        fontWeight: FontWeight.bold, fontSize: FontSizes.large,color: AppColors.textColor,decoration: TextDecoration.none),
                   ),
                   Text(
-                    'Quality, variety, convenience, and customer satisfaction. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    '\nQuality, variety, convenience, and customer satisfaction. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                     textAlign: TextAlign.justify,
-                    style: TextStyle(fontSize: FontSizes.medium),
+                    style: TextStyle(fontSize: FontSizes.medium,color: AppColors.textColor,decoration: TextDecoration.none,fontWeight: FontWeight.w300),
                   ),
                 ],
               ),

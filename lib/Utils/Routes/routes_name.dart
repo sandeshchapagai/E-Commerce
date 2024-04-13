@@ -4,6 +4,7 @@ class RoutesName {
   static const String signup = 'signup_screen';
   static const String splash = 'splash_screen';
   static const String startup_crasuel = 'startupCrasuel_screen';
+  static const String second_crasuel = 'second_screen';
   static const String add_cart = 'Add cart';
   static const String cart = 'cart';
   static const String favorite = 'favorite';
