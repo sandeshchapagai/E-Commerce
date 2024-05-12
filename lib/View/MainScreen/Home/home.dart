@@ -13,14 +13,14 @@ import 'package:buttons_tabbar/buttons_tabbar.dart';
 import '../../../Utils/Components/Color/color.dart';
 
 
-class DashBoard extends StatefulWidget {
-  const DashBoard({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<DashBoard> createState() => _DashBoardState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _DashBoardState extends State<DashBoard> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;

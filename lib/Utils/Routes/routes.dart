@@ -7,7 +7,6 @@ import 'package:ecommerce/View/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../View/MainScreen/main_scren.dart';
-import '../../View/StartUp_Screeen/Screens.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -15,14 +14,6 @@ class Routes {
       case RoutesName.splash:
         return MaterialPageRoute(
             builder: (BuildContext context) => const SplashScreen());
-
-      case RoutesName.startup_crasuel:
-        return MaterialPageRoute(
-            builder: (BuildContext context) => CarouselScreen1());
-
-      case RoutesName.second_crasuel:
-        return MaterialPageRoute(
-            builder: (BuildContext context) => CarouselScreen2());
 
       case RoutesName.home:
         return MaterialPageRoute(

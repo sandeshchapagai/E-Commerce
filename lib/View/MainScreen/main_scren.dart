@@ -77,10 +77,10 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         physics: const NeverScrollableScrollPhysics(),
         controller: _motionTabBarController,
         children: const <Widget>[
-          DashBoard(),
+          HomeScreen(),
           Favorite(),
           Order(),
-          DashBoard(),
+          HomeScreen(),
         ],
       ),
     );

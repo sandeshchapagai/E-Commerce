@@ -43,6 +43,7 @@ dependencies:
   rate_in_stars: ^0.0.3
   flutter_colorpicker: ^0.4.0
   fluttertoast: ^8.2.4
+  onboarding: ^4.0.2
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true

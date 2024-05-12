@@ -1,4 +1,4 @@
-import 'package:ecommerce/View/StartUp_Screeen/Screens.dart';
+import 'package:ecommerce/View/StartUp_Screeen/onboarding.dart';
 import 'package:ecommerce/View/StartUp_Screeen/startScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
         overlays: SystemUiOverlay.values,
       );
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) =>CarouselScreen1()),
+        MaterialPageRoute(builder: (_) =>OnBoardingPage()),
       );
     });
   }
