@@ -2,7 +2,7 @@ import 'package:ecommerce/Utils/Routes/routes_name.dart';
 import 'package:ecommerce/View/MainScreen/Cart/add_cart.dart';
 import 'package:ecommerce/View/MainScreen/Cart/cart.dart';
 import 'package:ecommerce/View/MainScreen/Favorite/favorite.dart';
-import 'package:ecommerce/View/StartUp_Screeen/startScreen.dart';
+import 'package:ecommerce/View/onboarding/startScreen.dart';
 import 'package:ecommerce/View/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

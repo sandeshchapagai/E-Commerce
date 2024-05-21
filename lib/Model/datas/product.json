@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "name": "Men's Running Shoes",
+    "description": "High-performance running shoes for men",
+    "price": 99.99,
+    "imageUrl": "assets/images/senakers1.png"
+  },
+  {
+    "id": "2",
+    "name": "Women's Running Shoes",
+    "description": "Lightweight and comfortable running shoes for women",
+    "price": 89.99,
+    "imageUrl": "assets/images/senakers2.png"
+  },
+  {
+    "id": "3",
+    "name": "Men's Casual Shoes",
+    "description": "Stylish and versatile casual shoes for men",
+    "price": 79.99,
+    "imageUrl": "assets/images/senakers3.png"
+  },
+  {
+    "id": "4",
+    "name": "Women's Casual Shoes",
+    "description": "Fashionable and comfortable casual shoes for women",
+    "price": 69.99,
+    "imageUrl": "assets/images/senakers4.png"
+  },
+  {
+    "id": "5",
+    "name": "Men's Dress Shoes",
+    "description": "Elegant and sophisticated dress shoes for men",
+    "price": 129.99,
+    "imageUrl": "assets/images/sneakers6.png"
+  },
+  {
+    "id": "6",
+    "name": "Women's Dress Shoes",
+    "description": "Classic and stylish dress shoes for women",
+    "price": 119.99,
+    "imageUrl": "assets/images/womens_dress_shoes.jpg"
+  }
+]

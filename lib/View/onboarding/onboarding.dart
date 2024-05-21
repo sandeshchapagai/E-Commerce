@@ -1,7 +1,7 @@
 import 'package:ecommerce/Utils/Components/Color/color.dart';
 import 'package:ecommerce/Utils/Routes/routes_name.dart';
 
-import 'package:ecommerce/View/StartUp_Screeen/startScreen.dart';
+import 'package:ecommerce/View/onboarding/startScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding.dart';
 
